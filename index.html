@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta Meteorológica</title>
+  <style>
+    /* Agrega estilos según tus preferencias */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    select {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Consulta Meteorológica</h1>
+
+  <!-- Sección para la información general -->
+  <h2>Información General</h2>
+  <div id="info-general"></div>
+
+  <!-- Sección para seleccionar provincia -->
+  <h2>Seleccionar Provincia</h2>
+  <select id="provincia-select" onchange="cargarMunicipios()">
+    <!-- Opciones de provincias se cargarán aquí dinámicamente -->
+  </select>
+
+  <!-- Sección para seleccionar municipio -->
+  <h2>Seleccionar Municipio</h2>
+  <select id="municipio-select" onchange="cargarDatosMunicipio()">
+    <!-- Opciones de municipios se cargarán aquí dinámicamente -->
+  </select>
+
+  <!-- Sección para mostrar datos del municipio -->
+  <h2>Datos del Municipio</h2>
+  <div id="datos-municipio"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
