@@ -1,11 +1,13 @@
-document.addEventListener('DOMContentLoaded', cargarInformacionGeneral);
 
 function cargarInformacionGeneral() {
+  console.log('cargando...');
   fetch('https://www.el-tiempo.net/api/json/v2/home')
+  
     .then(response => response.json())
     .then(data => {
-      const today = data.today ? data.today.temperatura : 'No disponible';
-      const tomorrow = data.tomorrow ? data.tomorrow.temperatura : 'No disponible';
+      console.log(data);
+      const today = data.today ? data.today.temperatura[0] : 'No disponible';
+      const tomorrow = data.tomorrow ? data.tomorrow.temperatura[0] : 'No disponible';
 
       document.getElementById('info-general').innerHTML = `
         <p>Previsión para hoy: ${today}</p>
@@ -16,6 +18,7 @@ function cargarInformacionGeneral() {
     })
     .catch(error => console.error('Error al obtener información general:', error));
 }
+cargarInformacionGeneral();
 
 function cargarProvincias(provincias) {
   const provinciaSelect = document.getElementById('provincia-select');
