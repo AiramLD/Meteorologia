@@ -157,4 +157,4 @@ provinciaSelect.addEventListener("change", () => {
 
 municipioSelect.addEventListener("change", () => {
   cargarDatosMunicipio();
-})
+});
