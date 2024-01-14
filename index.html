@@ -16,21 +16,28 @@
   </style>
 </head>
 <body>
+  <h1>METEOROLOGIA</h1>
   <h1>Consulta Meteorológica</h1>
-
   <!-- Sección para la información general -->
   <h2>Información General</h2>
-  <div id="info-general"></div>
+  <div id="info-general">
+    <div id="today">
+      <h3>Previsión para hoy</h3>
+    </div>
+    <div id="tomorrow">
+      <h3>Previsión para mañana</h3>
+    </div>
+  </div>
 
   <!-- Sección para seleccionar provincia -->
   <h2>Seleccionar Provincia</h2>
-  <select id="provincia-select" onchange="cargarMunicipios()">
+  <select id="provincia-select">
     <!-- Opciones de provincias se cargarán aquí dinámicamente -->
   </select>
 
   <!-- Sección para seleccionar municipio -->
   <h2>Seleccionar Municipio</h2>
-  <select id="municipio-select" onchange="cargarDatosMunicipio()">
+  <select id="municipio-select">
     <!-- Opciones de municipios se cargarán aquí dinámicamente -->
   </select>
 
